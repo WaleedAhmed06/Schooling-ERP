@@ -1,0 +1,66 @@
+import type { ParentData } from "../types/parent.types";
+export const parentSeed: ParentData = {
+  vouchers: [
+    {
+      id: "v1",
+      studentId: "s1",
+      month: "November 2026",
+      dueDate: "2026-11-10",
+      tuition: 8000,
+      computer: 1000,
+      transport: 2000,
+      discount: 500,
+      status: "Pending",
+    },
+    {
+      id: "v2",
+      studentId: "s2",
+      month: "November 2026",
+      dueDate: "2026-11-10",
+      tuition: 6500,
+      computer: 750,
+      transport: 0,
+      discount: 0,
+      status: "Pending",
+    },
+    {
+      id: "v3",
+      studentId: "s1",
+      month: "October 2026",
+      dueDate: "2026-10-10",
+      tuition: 8000,
+      computer: 1000,
+      transport: 2000,
+      discount: 500,
+      status: "Paid",
+      method: "Bank Transfer",
+      transactionId: "DEMO-202610-001",
+      paidAt: "2026-10-08T12:00:00Z",
+    },
+  ],
+  messages: [
+    {
+      id: "pm1",
+      studentId: "s1",
+      to: "Parent",
+      from: "Teacher",
+      body: "Ahmed is making good progress in mathematics.",
+      createdAt: "2026-10-29",
+    },
+  ],
+  events: [
+    {
+      id: "e1",
+      date: "2026-11-06",
+      title: "Parent–Teacher Meeting",
+      kind: "Meeting",
+    },
+    {
+      id: "e2",
+      date: "2026-11-12",
+      title: "Midterm Examinations Begin",
+      kind: "Examination",
+    },
+    { id: "e3", date: "2026-11-20", title: "Sports Day", kind: "Event" },
+  ],
+};

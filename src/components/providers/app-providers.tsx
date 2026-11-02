@@ -1,0 +1,20 @@
+"use client";
+import { ThemeProvider } from "next-themes";
+import { useEffect } from "react";
+import { useAuthStore } from "@/stores/auth.store";
+export function AppProviders({ children }: { children: React.ReactNode }) {
+  const hydrate = useAuthStore((s) => s.hydrate);
+  useEffect(() => {
+    hydrate();
+  }, [hydrate]);
+  return (
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="light"
+      enableSystem={false}
+      storageKey="school-erp-theme"
+    >
+      {children}
+    </ThemeProvider>
+  );
+}

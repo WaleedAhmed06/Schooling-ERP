@@ -10,7 +10,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "export": "NEXT_STATIC_EXPORT=1 next build"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.0",

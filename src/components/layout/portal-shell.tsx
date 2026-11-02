@@ -1,6 +1,6 @@
 "use client";
 import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import type { Role } from "@/types/domain";
 import { roles, roleTitles } from "@/config/roles";
 import { navigation } from "@/config/navigation";
@@ -10,13 +10,13 @@ import { PortalContent } from "@/features/portal/components/PortalContent";
 export function PortalShell({
   routeRole,
   slug = [],
-  query,
 }: {
   routeRole: string;
   slug?: string[];
-  query?: string;
 }) {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const query = searchParams.get("lesson") ?? searchParams.get("quiz") ?? undefined;
   const role = useAuthStore((s) => s.role);
   const hydrated = useAuthStore((s) => s.hydrated);
   const switchRole = useAuthStore((s) => s.switchRole);

@@ -26,7 +26,9 @@ export default async function PortalPage({
 }) {
   const { role, slug } = await params;
   return (
-    <Suspense fallback={<div className="loading-screen">Loading your portal...</div>}>
+    <Suspense
+      fallback={<div className="loading-screen">Loading your portal...</div>}
+    >
       <PortalShell routeRole={role} slug={slug} />
     </Suspense>
   );

@@ -109,27 +109,32 @@ p {
   letter-spacing: -0.8px;
   white-space: nowrap;
 }
-.brand-logo {
-  height: 38px;
-  width: 38px;
-  background: var(--primary);
-  color: white;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
+.brand-image-wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 280px;
+  padding: 8px;
+  border-radius: 8px;
+  background: #fff;
 }
-.brand-accent {
-  color: var(--primary);
+.brand-image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
-.brand-light {
-  color: #fff;
+.sidebar-head .brand {
+  flex: 1;
+  min-width: 0;
 }
-.brand-light .brand-accent {
-  color: #91c2ff;
+.sidebar-head .brand-image-wrap {
+  min-height: 54px;
+  padding: 12px 8px;
+  background: #e8f6f7;
+  border: 1px solid #b9e2e5;
 }
-.brand-light .brand-logo {
-  background: rgba(255, 255, 255, 0.18);
+.sidebar-collapsed .sidebar-head {
+  padding: 0 6px;
 }
 .icon-button {
   width: 39px;
@@ -880,7 +885,7 @@ p {
   display: none;
 }
 .sidebar-collapsed .sidebar-head {
-  padding: 0 18px;
+  padding: 0 6px;
 }
 .sidebar-collapsed .school-select {
   padding: 5px;

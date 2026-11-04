@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import {
-  GraduationCap,
   ArrowRight,
   ShieldCheck,
   BookOpen,
@@ -14,6 +13,7 @@ import {
   Eye,
   EyeOff,
 } from "lucide-react";
+import { BrandLogo } from "@/components/shared/brand-logo";
 import { ThemeToggle } from "@/components/shared/theme-toggle";
 import { demoUsers, roles, roleTitles, demoPassword } from "@/config/roles";
 import { useAuthStore } from "@/stores/auth.store";
@@ -50,12 +50,7 @@ export default function Login() {
     <main className="login-page">
       <section className="login-aside">
         <div className="brand brand-light">
-          <span className="brand-logo">
-            <GraduationCap size={25} />
-          </span>
-          <span>
-            School<span className="brand-accent">ERP</span>
-          </span>
+          <BrandLogo />
         </div>
         <div className="login-aside-center">
           <div className="aside-pill">THE COMPLETE SCHOOL ECOSYSTEM</div>
@@ -112,7 +107,7 @@ export default function Login() {
         </div>
         <div className="login-form-wrap">
           <div className="login-mobile-brand">
-            <GraduationCap /> SchoolERP
+            <BrandLogo />
           </div>
           <div className="eyebrow">WELCOME BACK</div>
           <h2>Sign in to your portal</h2>

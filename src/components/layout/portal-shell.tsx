@@ -16,7 +16,8 @@ export function PortalShell({
 }) {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const query = searchParams.get("lesson") ?? searchParams.get("quiz") ?? undefined;
+  const query =
+    searchParams.get("lesson") ?? searchParams.get("quiz") ?? undefined;
   const role = useAuthStore((s) => s.role);
   const hydrated = useAuthStore((s) => s.hydrated);
   const switchRole = useAuthStore((s) => s.switchRole);
